@@ -1,0 +1,50 @@
+@import "../../utils/variales.scss";
+
+.sidebar {
+  width: 30px;
+  background-color: $Black-bg;
+  color: $White;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 18px;
+  overflow: hidden;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    li {
+      margin: 10px;
+      height: 20px;
+      width: 20px;
+      background-color: $White;
+      padding: 10px ;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      & img {
+        width: 25px;
+      }
+    }
+  }
+
+  span {
+    position: absolute;
+    height: 300px;
+    bottom: -130px;
+    p {
+      font-size: 8px;
+      width: 300px;
+      transform: rotate(-90deg);
+    }
+  }
+}

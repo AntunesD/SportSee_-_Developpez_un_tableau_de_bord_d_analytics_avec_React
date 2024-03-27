@@ -1,0 +1,27 @@
+.nutrition {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  & img {
+    width: 4vw;
+    margin-right: 24px;
+   
+  }
+  & span {
+    background-color:  #FBFBFB;
+    display: flex;
+    align-items: center;
+ padding: 20px;
+  }
+  & p,
+  h2 {
+    margin: 0;
+  }
+  & h2 {
+    font-size: 16px;
+  }
+  & p {
+    font-size: 12px;
+    color: #74798C;
+  }
+}

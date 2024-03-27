@@ -1,0 +1,57 @@
+.activity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-bottom: 20px;
+  background-color: #fbfbfb;
+
+  & h2 {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  & span {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  & ul {
+    display: inline-flex;
+    align-items: center;
+    list-style-type: none;
+    font-size: 14px;
+    color: #9b9eac;
+    font-weight: bold;
+    margin-right: 38px;
+  }
+
+  & li {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 12px;
+    &::before {
+      content: "\2022"; // Utilisation du caractère unicode pour le point
+      margin-right: 5px;
+      font-size: 30px;
+      color: black;
+    }
+  }
+
+  & li:nth-child(2)::before {
+    color: red;
+  }
+
+  & .tooltip {
+    background-color: red;
+    color: white;
+    padding: 1px;
+    text-align: center;
+    & p {
+      margin: 10px 7px;
+      font-size: 7px;
+    }
+  }
+}
