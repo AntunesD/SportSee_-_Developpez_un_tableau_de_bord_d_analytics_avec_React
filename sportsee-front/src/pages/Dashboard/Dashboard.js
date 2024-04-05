@@ -14,6 +14,7 @@ import "./Dashboard.scss"
 
 const Dashboard = () => {
   const [userData, setUserData] = useState(null);
+  const [error, setError] = useState(null); // Ajout de l'état d'erreur
 
   //A l'avenir mettre une logique de récupération de l'ID
   //Storage ou cookie apres connexion par exemple
@@ -25,12 +26,16 @@ const Dashboard = () => {
         const userData = await GetId(userId);
         setUserData(userData);
       } catch (error) {
-        // Gérer les erreurs ici
+        setError("Une erreur s'est produite lors de la récupération des données.");
       }
     };
 
     fetchData();
   }, []);
+
+   if (error) {
+    return <div>{error}</div>; // Afficher le message d'erreur
+  }
 
   // Vérifier si les données utilisateur sont disponibles
   if (!userData) {
